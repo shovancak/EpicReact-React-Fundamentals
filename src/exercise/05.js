@@ -4,11 +4,6 @@
 import * as React from 'react'
 import '../box-styles.css'
 
-
-const smallBox = <div className='box box--small' style={{backgroundColor: 'lightblue'}}>small lightblue box</div>
-const mediumBox = <div className='box box--medium' style={{backgroundColor: 'pink'}}>medium pink box</div>
-const largeBox = <div className='box box--large' style={{backgroundColor: 'orange'}}>large orange box</div>
-
 const Box = ({className = '',size,  style, ...otherProps}) => {
   const sizeClassName = size ? `box--${size}` : ''
   return (<div  className={`box ${className} ${sizeClassName}`} style={{fontStyle: 'italic', ...style}} {...otherProps} />)
